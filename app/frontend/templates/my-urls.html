@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block html_classes %}my-urls-page{% endblock %}
+{% block title %}User Short URLs | shurl.me{% endblock %}
+
+
+{% block main_content %}
+<main class="main-content">
+  <h1 class="page-heading">User URLs</h1>
+
+  {# "ADD A SHORT URL" FORM #}
+
+  <section id="add-url-section">
+    <h2 class="section-heading">Add a new redirect</h2>
+    <form id="add-url-form" class="needs-validation" action="{{ url_for('api-create-url') }}" method="post">
+      <div class="form-row">
+        <div class="col-md-6 col-lg-5 p-2">
+          <label for="add-url-form__destination">Enter a URL to shorten:</label>
+          <input id="add-url-form__destination" class="form-control long-url" name="destination" type="text"
+                  placeholder="https://example.com/a-long-url/you-would-like-to-shorten" required>
+        </div>
+        <div class="col-md-6 col-lg-5 p-2">
+          <label for="add-url-form__key">Enter the desired short URL <em>(optional)</em>:</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">https://shurl.me/</div>
+            </div>
+            <input id="add-url-form__key" class="form-control" name="key" type="text" placeholder="new-fancy-url">
+          </div>
+        </div>
+        <div class="col-lg-2 pt-2 pt-lg-3">
+          <button class="submit-btn btn btn-primary m-1 mt-lg-4" type="submit">Shorten URL</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  {# USER'S SHORT URLS #}
+
+  <section id="my-urls-section">
+    <h2 class="section-heading">Existing redirects</h2>
+    <table id="my-urls-table" class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th>#</th>
+          <th>Full URL</th>
+          <th>Short URL</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="my-urls-table-spinner">
+      <div class="spinner-border" role="status"></div>
+    </div>
+    <ul id="my-urls-pagination" class="pagination"></ul>
+  </section>
+
+</main>
+{% endblock main_content %}

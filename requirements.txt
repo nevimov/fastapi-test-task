@@ -1,0 +1,23 @@
+fastapi==0.63.0
+pydantic==1.8.1
+uvicorn[standard]==0.13.4
+
+# DB
+alembic==1.5.8
+psycopg2==2.8.6
+sqlalchemy==1.4.5
+
+# Security
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.2.0
+
+# Forms
+python-multipart==0.0.5
+
+# Templates and static files
+jinja2==2.11.3
+aiofiles==0.6.0
+
+# Emails
+emails==0.5.15
+email-validator==1.0.5

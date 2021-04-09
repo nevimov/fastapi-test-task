@@ -1,0 +1,8 @@
+-r requirements.txt
+
+prospector==1.3.1
+
+# Watchdog (tracks SASS file changes) and it's dependencies.
+watchdog==2.0.2
+argh==0.26.2
+PyYAML==5.4.1

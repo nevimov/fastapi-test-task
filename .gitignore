@@ -1,0 +1,26 @@
+# Patterns of files that should be ignored by Git.
+
+*~
+*.db
+*.swp
+
+# Python
+*.py[cd]
+.coverage
+__pycache__/
+.pytest_cache/
+.tox/
+
+# Node
+npm-debug.log
+node_modules/
+
+# SASS
+.sass-cache/
+
+# VSCode
+.devcontainer/
+.vscode/
+
+# Project-specific
+.local/

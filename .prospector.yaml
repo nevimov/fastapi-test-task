@@ -1,0 +1,24 @@
+strictness: medium
+doc-warnings: false
+test-warnings: false
+autodetect: true
+member-warnings: false
+
+ignore-paths:
+  - alembic
+
+pylint:
+  run: true
+  disable:
+    - too-many-locals
+    - unused-argument
+    - unsubscriptable-object
+
+pep8:
+  run: false
+
+pyflakes:
+  run: false
+
+dodgy:
+  run: false

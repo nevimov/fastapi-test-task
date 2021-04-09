@@ -1,0 +1,43 @@
+# Files and directories that should NOT be included in the Docker image.
+#
+# NOTE: .dockerignore  and .gitignore use different exclusion rules!
+# For example, if .gitignore contains pattern '*.py', then all files with the
+# py extension will be ignored. The same pattern in .dockerignore means exclude
+# *.py files ONLY at the root directory. To exclude all python files use
+# pattern '**/*.py'.
+#
+# To check the resulting build context, run the docker-ctx.sh script.
+#
+
+.docker-compose.ya?ml
+.dockerignore
+Dockerfile
+
+
+#
+## Common
+#
+
+**/*~
+**/*.db
+**/*.py[cd]
+**/*.swp
+**/.coverage
+**/npm-debug.log
+
+**/.git/
+**/.sass-cache/
+**/.tox/
+**/__pycache__/
+**/node_modules/
+
+# VSCode
+**/.devcontainer/
+**/.vscode/
+
+
+#
+## Project-specific
+#
+
+.local/

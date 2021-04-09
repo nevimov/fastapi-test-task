@@ -1,0 +1,71 @@
+// "My Short URLs" page styles.
+//
+
+@use "bootstrap" as B;
+
+
+.my-urls-page {
+
+    .page-heading {
+        padding: 1.25rem 1rem 1.4rem;
+        background-color: B.$gray-900;
+        color: B.$gray-200;
+    }
+
+    .section-heading {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+    }
+}
+
+
+// *****************************
+// *** "ADD NEW URL" SECTION ***
+// *****************************
+
+#add-url-section {
+    padding-top: 1.5rem;
+}
+
+#add-url-form {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+
+// *************************
+// *** "MY URLS" SECTION ***
+// *************************
+
+#my-urls-section {
+    padding-top: 1.5rem;
+}
+
+#my-urls-table {
+    border-radius: .5rem;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+}
+
+#my-urls-table-spinner {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .spinner-border {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+#my-urls-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem;
+}
